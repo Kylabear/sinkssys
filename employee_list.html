@@ -22,7 +22,7 @@
 </head>
 <body class="bg-cover bg-center flex items-center justify-center h-screen" style="background-image: url('img/bckgrnd.png');">
     <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-6 text-center">Sinks R Us - Employee List</h2>
+        <h2 class="text-3xl font-bold mb-6 text-center text-white">Sinks R Us - Employee List</h2>
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr>
@@ -45,58 +45,64 @@
                     <td class="py-2 px-4 border">ivan.petrov@sinksrus.com</td>
                     <td class="py-2 px-4 border">555-6789</td>
                     <td class="py-2 px-4 border">12 Red Square, Moscow</td>
-                    <td class="py-2 px-4 border">male</td>
+                    <td class="py-2 px-4 border">Male</td>
                     <td class="py-2 px-4 border">Single</td>
+                    <td class="py-2 px-4 border">
                         <button onclick="openModal('Ivan Petrov')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                     </td>
                 </tr>
-                <td class="py-2 px-4 border">Pedro Los Baños</td>
+                <tr>
+                    <td class="py-2 px-4 border">Pedro Los Baños</td>
                     <td class="py-2 px-4 border">Marketing Manager</td>
                     <td class="py-2 px-4 border">Marketing</td>
                     <td class="py-2 px-4 border">pedro_los_banos@sinksrus.com</td>
-                    <td class="py-2 px-4 border">
+                    <td class="py-2 px-4 border">555-1234</td>
                     <td class="py-2 px-4 border">123 Mabini St</td>
-                    <td class="py-2 px-4 border">male</td>
-                    <td class="py-2 px-4 border">Maried</td>
+                    <td class="py-2 px-4 border">Male</td>
+                    <td class="py-2 px-4 border">Married</td>
+                    <td class="py-2 px-4 border">
                         <button onclick="openModal('Pedro Los Baños')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                     </td>
-
                 </tr>
-                <td class="py-2 px-4 border">Ana Gómez</td>
+                <tr>
+                    <td class="py-2 px-4 border">Ana Gómez</td>
                     <td class="py-2 px-4 border">HR Specialist</td>
-                    <td class="py-2 px-4 border"> 	HR</td>
+                    <td class="py-2 px-4 border">HR</td>
                     <td class="py-2 px-4 border">ana.gomez@sinksrus.com</td>
                     <td class="py-2 px-4 border">555-1526</td>
-                    <td class="py-2 px-4 border"></td>
-                    <td class="py-2 px-4 border">F</td>
+                    <td class="py-2 px-4 border">N/A</td>
+                    <td class="py-2 px-4 border">Female</td>
                     <td class="py-2 px-4 border">Divorced</td>
+                    <td class="py-2 px-4 border">
                         <button onclick="openModal('Ana Gómez')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                     </td>
-                
                 </tr>
-                <td class="py-2 px-4 border">John Wu</td>
+                <tr>
+                    <td class="py-2 px-4 border">John Wu</td>
                     <td class="py-2 px-4 border">Sales Associate</td>
                     <td class="py-2 px-4 border">Sales</td>
-                    <td class="py-2 px-4 border"> 	john.wu@sinksrus.com</td>
+                    <td class="py-2 px-4 border">john.wu@sinksrus.com</td>
                     <td class="py-2 px-4 border">555-6925</td>
                     <td class="py-2 px-4 border">456 Rizal St</td>
                     <td class="py-2 px-4 border">Male</td>
                     <td class="py-2 px-4 border">Single</td>
+                    <td class="py-2 px-4 border">
                         <button onclick="openModal('John Wu')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                     </td>
-                
                 </tr>
-                <td class="py-2 px-4 border">Emma Wilson</td>
+                <tr>
+                    <td class="py-2 px-4 border">Emma Wilson</td>
                     <td class="py-2 px-4 border">CEO</td>
                     <td class="py-2 px-4 border">Admin</td>
                     <td class="py-2 px-4 border">emma@sinksrus.com</td>
                     <td class="py-2 px-4 border">555-1111</td>
-                    <td class="py-2 px-4 border"></td>
+                    <td class="py-2 px-4 border">N/A</td>
                     <td class="py-2 px-4 border">Female</td>
-                    <td class="py-2 px-4 border">Maried</td>
+                    <td class="py-2 px-4 border">Married</td>
+                    <td class="py-2 px-4 border">
                         <button onclick="openModal('Emma Wilson')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                     </td>
-
+                </tr>
             </tbody>
         </table>
     </div>
@@ -120,7 +126,6 @@
         function openModal(name) {
             const modal = document.getElementById('employeeModal');
             document.getElementById('employeeName').textContent = name;
-            // Populate other fields dynamically here based on the selected employee
             modal.classList.add('active');
         }
 
