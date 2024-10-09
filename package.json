@@ -1,0 +1,27 @@
+{
+  "name": "sinkssys",
+  "version": "1.0.0",
+  "description": "Sinks R Us",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kylabear/sinkssys.git"
+  },
+  "keywords": [
+    "Sinks",
+    "R",
+    "Us"
+  ],
+  "author": "Bangachonkyla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kylabear/sinkssys/issues"
+  },
+  "homepage": "https://github.com/Kylabear/sinkssys#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

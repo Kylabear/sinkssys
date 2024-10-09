@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinks R Us Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@1.4.0/dist/flowbite.min.css" />
 </head>
-<body class="bg-cover bg-center flex items-center justify-center h-screen" style="background-image: url('img/bckgrnd.png');">
-    <div class="bg-white bg-opacity-15 p-8 rounded shadow-lg max-w-sm w-full">
-        <h2 class="text-2xl font-bold text-center mb-6">Sinks R Us - Login</h2>
+<body class="bg-cover bg-center flex items-center justify-center min-h-screen" style="background-image: url('img/bckgrnd.png');">
+    <div class="bg-white bg-opacity-25 p-8 rounded-lg shadow-lg max-w-xs w-full mx-4 sm:max-w-sm md:max-w-md lg:max-w-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center text-white">Sinks R Us - Login</h2>
         <form action="employee_list.html" method="GET" onsubmit="return validateForm()">
             <div class="mb-4">
-                <label for="username" class="block text-gray-700">Username</label>
+                <label for="username" class="block text-white">Username</label>
                 <input type="text" id="username" name="username" required class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your username">
             </div>
             <div class="mb-4">
-                <label for="password" class="block text-gray-700">Password</label>
+                <label for="password" class="block text-white">Password</label>
                 <input type="password" id="password" name="password" required class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Enter your password">
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Login</button>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200">Login</button>
         </form>
     </div>
 
@@ -28,9 +29,9 @@
             const password = document.getElementById("password").value.trim();
             if (username === "" || password === "") {
                 alert("Both fields are required!");
-                return false; // Prevent form submission
+                return false; 
             }
-            return true; // Allow form submission
+            return true; 
         }
     </script>
 </body>

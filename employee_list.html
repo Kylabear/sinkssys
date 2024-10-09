@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,96 +16,112 @@
             justify-content: center;
             align-items: center;
         }
+
         #employeeModal.active {
             display: flex;
         }
+
+        table {
+            opacity: 0.85;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
     </style>
 </head>
-<body class="bg-cover bg-center flex items-center justify-center h-screen" style="background-image: url('img/bckgrnd.png');">
+
+<body class="bg-cover bg-center flex items-center justify-center min-h-screen p-4" style="background-image: url('img/bckgrnd.png');">
     <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-6 text-center text-white">Sinks R Us - Employee List</h2>
-        <table class="min-w-full bg-white border border-gray-300">
-            <thead>
-                <tr>
-                    <th class="py-2 px-4 border">Name</th>
-                    <th class="py-2 px-4 border">Job Title</th>
-                    <th class="py-2 px-4 border">Department</th>
-                    <th class="py-2 px-4 border">Email</th>
-                    <th class="py-2 px-4 border">Contact No.</th>
-                    <th class="py-2 px-4 border">Address</th>
-                    <th class="py-2 px-4 border">Sex</th>
-                    <th class="py-2 px-4 border">Marital Status</th>
-                    <th class="py-2 px-4 border">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="py-2 px-4 border">Ivan Petrov</td>
-                    <td class="py-2 px-4 border">Software Engineer</td>
-                    <td class="py-2 px-4 border">IT</td>
-                    <td class="py-2 px-4 border">ivan.petrov@sinksrus.com</td>
-                    <td class="py-2 px-4 border">555-6789</td>
-                    <td class="py-2 px-4 border">12 Red Square, Moscow</td>
-                    <td class="py-2 px-4 border">Male</td>
-                    <td class="py-2 px-4 border">Single</td>
-                    <td class="py-2 px-4 border">
-                        <button onclick="openModal('Ivan Petrov')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4 border">Pedro Los Baños</td>
-                    <td class="py-2 px-4 border">Marketing Manager</td>
-                    <td class="py-2 px-4 border">Marketing</td>
-                    <td class="py-2 px-4 border">pedro_los_banos@sinksrus.com</td>
-                    <td class="py-2 px-4 border">555-1234</td>
-                    <td class="py-2 px-4 border">123 Mabini St</td>
-                    <td class="py-2 px-4 border">Male</td>
-                    <td class="py-2 px-4 border">Married</td>
-                    <td class="py-2 px-4 border">
-                        <button onclick="openModal('Pedro Los Baños')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4 border">Ana Gómez</td>
-                    <td class="py-2 px-4 border">HR Specialist</td>
-                    <td class="py-2 px-4 border">HR</td>
-                    <td class="py-2 px-4 border">ana.gomez@sinksrus.com</td>
-                    <td class="py-2 px-4 border">555-1526</td>
-                    <td class="py-2 px-4 border">N/A</td>
-                    <td class="py-2 px-4 border">Female</td>
-                    <td class="py-2 px-4 border">Divorced</td>
-                    <td class="py-2 px-4 border">
-                        <button onclick="openModal('Ana Gómez')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4 border">John Wu</td>
-                    <td class="py-2 px-4 border">Sales Associate</td>
-                    <td class="py-2 px-4 border">Sales</td>
-                    <td class="py-2 px-4 border">john.wu@sinksrus.com</td>
-                    <td class="py-2 px-4 border">555-6925</td>
-                    <td class="py-2 px-4 border">456 Rizal St</td>
-                    <td class="py-2 px-4 border">Male</td>
-                    <td class="py-2 px-4 border">Single</td>
-                    <td class="py-2 px-4 border">
-                        <button onclick="openModal('John Wu')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4 border">Emma Wilson</td>
-                    <td class="py-2 px-4 border">CEO</td>
-                    <td class="py-2 px-4 border">Admin</td>
-                    <td class="py-2 px-4 border">emma@sinksrus.com</td>
-                    <td class="py-2 px-4 border">555-1111</td>
-                    <td class="py-2 px-4 border">N/A</td>
-                    <td class="py-2 px-4 border">Female</td>
-                    <td class="py-2 px-4 border">Married</td>
-                    <td class="py-2 px-4 border">
-                        <button onclick="openModal('Emma Wilson')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-white">Sinks R Us - Employee List</h2>
+
+        <!-- Table Container -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-black border border-gray-300 rounded-lg">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border text-white">Name</th>
+                        <th class="py-2 px-4 border text-white">Job Title</th>
+                        <th class="py-2 px-4 border text-white">Department</th>
+                        <th class="py-2 px-4 border text-white">Email</th>
+                        <th class="py-2 px-4 border text-white">Contact No.</th>
+                        <th class="py-2 px-4 border text-white">Address</th>
+                        <th class="py-2 px-4 border text-white">Sex</th>
+                        <th class="py-2 px-4 border text-white">Marital Status</th>
+                        <th class="py-2 px-4 border text-white">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border text-white">Ivan Petrov</td>
+                        <td class="py-2 px-4 border text-white">Software Engineer</td>
+                        <td class="py-2 px-4 border text-white">IT</td>
+                        <td class="py-2 px-4 border text-white">ivan.petrov@sinksrus.com</td>
+                        <td class="py-2 px-4 border text-white">555-6789</td>
+                        <td class="py-2 px-4 border text-white">12 Red Square, Moscow</td>
+                        <td class="py-2 px-4 border text-white">Male</td>
+                        <td class="py-2 px-4 border text-white">Single</td>
+                        <td class="py-2 px-4 border text-white">
+                            <button onclick="openModal('Ivan Petrov', 'Software Engineer', 'IT', 'ivan.petrov@sinksrus.com', '555-6789', '12 Red Square, Moscow', 'Male', 'Single')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border text-white">Pedro Los Baños</td>
+                        <td class="py-2 px-4 border text-white">Marketing Manager</td>
+                        <td class="py-2 px-4 border text-white">Marketing</td>
+                        <td class="py-2 px-4 border text-white">pedro_los_banos@sinksrus.com</td>
+                        <td class="py-2 px-4 border text-white">555-1234</td>
+                        <td class="py-2 px-4 border text-white">123 Mabini St</td>
+                        <td class="py-2 px-4 border text-white">Male</td>
+                        <td class="py-2 px-4 border text-white">Married</td>
+                        <td class="py-2 px-4 border text-white">
+                            <button onclick="openModal('Pedro Los Baños', 'Marketing Manager', 'Marketing', 'pedro_los_banos@sinksrus.com', '555-1234', '123 Mabini St', 'Male', 'Married')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border text-white">Ana Gómez</td>
+                        <td class="py-2 px-4 border text-white">HR Specialist</td>
+                        <td class="py-2 px-4 border text-white">HR</td>
+                        <td class="py-2 px-4 border text-white">ana.gomez@sinksrus.com</td>
+                        <td class="py-2 px-4 border text-white">555-1526</td>
+                        <td class="py-2 px-4 border text-white">N/A</td>
+                        <td class="py-2 px-4 border text-white">Female</td>
+                        <td class="py-2 px-4 border text-white">Divorced</td>
+                        <td class="py-2 px-4 border text-white">
+                            <button onclick="openModal('Ana Gómez', 'HR Specialist', 'HR', 'ana.gomez@sinksrus.com', '555-1526', 'N/A', 'Female', 'Divorced')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border text-white">John Wu</td>
+                        <td class="py-2 px-4 border text-white">Sales Associate</td>
+                        <td class="py-2 px-4 border text-white">Sales</td>
+                        <td class="py-2 px-4 border text-white">john.wu@sinksrus.com</td>
+                        <td class="py-2 px-4 border text-white">555-6925</td>
+                        <td class="py-2 px-4 border text-white">456 Rizal St</td>
+                        <td class="py-2 px-4 border text-white">Male</td>
+                        <td class="py-2 px-4 border text-white">Single</td>
+                        <td class="py-2 px-4 border text-white">
+                            <button onclick="openModal('John Wu', 'Sales Associate', 'Sales', 'john.wu@sinksrus.com', '555-6925', '456 Rizal St', 'Male', 'Single')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border text-white">Emma Wilson</td>
+                        <td class="py-2 px-4 border text-white">CEO</td>
+                        <td class="py-2 px-4 border text-white">Admin</td>
+                        <td class="py-2 px-4 border text-white">emma@sinksrus.com</td>
+                        <td class="py-2 px-4 border text-white">555-1111</td>
+                        <td class="py-2 px-4 border text-white">N/A</td>
+                        <td class="py-2 px-4 border text-white">Female</td>
+                        <td class="py-2 px-4 border text-white">Married</td>
+                        <td class="py-2 px-4 border text-white">
+                            <button onclick="openModal('Emma Wilson', 'CEO', 'Admin', 'emma@sinksrus.com', '555-1111', 'N/A', 'Female', 'Married')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -123,16 +140,23 @@
     </div>
 
     <script>
-        function openModal(name) {
-            const modal = document.getElementById('employeeModal');
+        function openModal(name, jobTitle, department, email, contact, address, sex, maritalStatus) {
             document.getElementById('employeeName').textContent = name;
-            modal.classList.add('active');
+            document.getElementById('employeeJobTitle').textContent = jobTitle;
+            document.getElementById('employeeDepartment').textContent = department;
+            document.getElementById('employeeEmail').textContent = email;
+            document.getElementById('employeeContact').textContent = contact;
+            document.getElementById('employeeAddress').textContent = address;
+            document.getElementById('employeeSex').textContent = sex;
+            document.getElementById('employeeMaritalStatus').textContent = maritalStatus;
+
+            document.getElementById('employeeModal').classList.add('active');
         }
 
         function closeModal() {
-            const modal = document.getElementById('employeeModal');
-            modal.classList.remove('active');
+            document.getElementById('employeeModal').classList.remove('active');
         }
     </script>
 </body>
+
 </html>
