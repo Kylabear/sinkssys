@@ -7,7 +7,7 @@
     <title>Employee List - Sinks R Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Modal Style */
+        /* My Modal Style */
         #employeeModal {
             display: none;
             position: fixed;
@@ -35,7 +35,7 @@
 
 <body class="bg-cover bg-center flex items-center justify-center min-h-screen p-4" style="background-image: url('img/bckgrnd.png');">
     <div class="container mx-auto">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-white">Sinks R Us - Employee List</h2>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-white">Employee List</h2>
 
         <!-- Table Container -->
         <div class="overflow-x-auto">
@@ -64,7 +64,7 @@
                         <td class="py-2 px-4 border text-white">Male</td>
                         <td class="py-2 px-4 border text-white">Single</td>
                         <td class="py-2 px-4 border text-white">
-                            <button onclick="openModal('Ivan Petrov', 'Software Engineer', 'IT', 'ivan.petrov@sinksrus.com', '555-6789', '12 Red Square, Moscow', 'Male', 'Single')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                            <button onclick="openModal('Ivan Petrov', 'Software Engineer', 'IT', 'ivan.petrov@sinksrus.com', '555-6789', '12 Red Square, Moscow', 'Male', 'Single', 'Years of Experience: 5, Skills: Java, Python')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                         </td>
                     </tr>
                     <tr>
@@ -77,7 +77,7 @@
                         <td class="py-2 px-4 border text-white">Male</td>
                         <td class="py-2 px-4 border text-white">Married</td>
                         <td class="py-2 px-4 border text-white">
-                            <button onclick="openModal('Pedro Los Baños', 'Marketing Manager', 'Marketing', 'pedro_los_banos@sinksrus.com', '555-1234', '123 Mabini St', 'Male', 'Married')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                            <button onclick="openModal('Pedro Los Baños', 'Marketing Manager', 'Marketing', 'pedro_los_banos@sinksrus.com', '555-1234', '123 Mabini St', 'Male', 'Married', 'Years of Experience: 7, Skills: SEO, Content Creation')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                         </td>
                     </tr>
                     <tr>
@@ -90,7 +90,7 @@
                         <td class="py-2 px-4 border text-white">Female</td>
                         <td class="py-2 px-4 border text-white">Divorced</td>
                         <td class="py-2 px-4 border text-white">
-                            <button onclick="openModal('Ana Gómez', 'HR Specialist', 'HR', 'ana.gomez@sinksrus.com', '555-1526', 'N/A', 'Female', 'Divorced')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                            <button onclick="openModal('Ana Gómez', 'HR Specialist', 'HR', 'ana.gomez@sinksrus.com', '555-1526', 'N/A', 'Female', 'Divorced', 'Years of Experience: 4, Skills: Recruitment, Employee Relations')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                         </td>
                     </tr>
                     <tr>
@@ -103,7 +103,7 @@
                         <td class="py-2 px-4 border text-white">Male</td>
                         <td class="py-2 px-4 border text-white">Single</td>
                         <td class="py-2 px-4 border text-white">
-                            <button onclick="openModal('John Wu', 'Sales Associate', 'Sales', 'john.wu@sinksrus.com', '555-6925', '456 Rizal St', 'Male', 'Single')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                            <button onclick="openModal('John Wu', 'Sales Associate', 'Sales', 'john.wu@sinksrus.com', '555-6925', '456 Rizal St', 'Male', 'Single', 'Years of Experience: 3, Skills: Customer Service, Sales Strategies')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                         </td>
                     </tr>
                     <tr>
@@ -116,7 +116,7 @@
                         <td class="py-2 px-4 border text-white">Female</td>
                         <td class="py-2 px-4 border text-white">Married</td>
                         <td class="py-2 px-4 border text-white">
-                            <button onclick="openModal('Emma Wilson', 'CEO', 'Admin', 'emma@sinksrus.com', '555-1111', 'N/A', 'Female', 'Married')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
+                            <button onclick="openModal('Emma Wilson', 'CEO', 'Admin', 'emma@sinksrus.com', '555-1111', 'N/A', 'Female', 'Married', 'Years of Experience: 10, Skills: Leadership, Strategy')" class="bg-blue-500 text-white px-3 py-1 rounded">View Info</button>
                         </td>
                     </tr>
                 </tbody>
@@ -127,29 +127,30 @@
     <!-- Modal -->
     <div id="employeeModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
         <div class="bg-white p-6 rounded-lg max-w-lg w-full">
-            <h3 id="employeeName" class="text-2xl font-bold mb-4">Employee Name</h3>
-            <p><strong>Job Title:</strong> <span id="employeeJobTitle"></span></p>
-            <p><strong>Department:</strong> <span id="employeeDepartment"></span></p>
-            <p><strong>Email:</strong> <span id="employeeEmail"></span></p>
-            <p><strong>Contact No:</strong> <span id="employeeContact"></span></p>
-            <p><strong>Address:</strong> <span id="employeeAddress"></span></p>
-            <p><strong>Sex:</strong> <span id="employeeSex"></span></p>
-            <p><strong>Marital Status:</strong> <span id="employeeMaritalStatus"></span></p>
+            <h3 id="employeeName" class="text-2xl font-bold mb-4"></h3>
+            <div class="mb-2"><strong>Job Title:</strong> <span id="employeeJobTitle"></span></div>
+            <div class="mb-2"><strong>Department:</strong> <span id="employeeDepartment"></span></div>
+            <div class="mb-2"><strong>Email:</strong> <span id="employeeEmail"></span></div>
+            <div class="mb-2"><strong>Contact No.:</strong> <span id="employeeContactNo"></span></div>
+            <div class="mb-2"><strong>Address:</strong> <span id="employeeAddress"></span></div>
+            <div class="mb-2"><strong>Sex:</strong> <span id="employeeSex"></span></div>
+            <div class="mb-2"><strong>Marital Status:</strong> <span id="employeeMaritalStatus"></span></div>
+            <div class="mb-2"><strong>Additional Information:</strong> <span id="employeeAdditionalInfo"></span></div>
             <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
         </div>
     </div>
 
     <script>
-        function openModal(name, jobTitle, department, email, contact, address, sex, maritalStatus) {
+        function openModal(name, jobTitle, department, email, contactNo, address, sex, maritalStatus, additionalInfo) {
             document.getElementById('employeeName').textContent = name;
             document.getElementById('employeeJobTitle').textContent = jobTitle;
             document.getElementById('employeeDepartment').textContent = department;
             document.getElementById('employeeEmail').textContent = email;
-            document.getElementById('employeeContact').textContent = contact;
+            document.getElementById('employeeContactNo').textContent = contactNo;
             document.getElementById('employeeAddress').textContent = address;
             document.getElementById('employeeSex').textContent = sex;
             document.getElementById('employeeMaritalStatus').textContent = maritalStatus;
-
+            document.getElementById('employeeAdditionalInfo').textContent = additionalInfo;
             document.getElementById('employeeModal').classList.add('active');
         }
 
